@@ -7,6 +7,46 @@
     <service name="ServicioCrearU">
       <implementation-class>ventas.seguridad.service.ServicioCrearU</implementation-class>
     </service>
+    <service name="ServiciosUsuarios">
+      <implementation-class>ventas.seguridad.service.ServiciosUsuarios</implementation-class>
+    </service>
   </services>
-  <clients/>
+  <clients>
+    <client name="ServiciosUsuarios">
+      <wsdl-url>http://desktop-4bdn6g9:8080/ventas_soa1/ServiciosUsuarios?wsdl</wsdl-url>
+      <local-wsdl-file>desktop-4bdn6g9_8080/ventas_soa1/ServiciosUsuarios.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">ventas.cliente.servicio</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://desktop-4bdn6g9:8080/ventas_soa1/ServiciosUsuarios?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>package</wsimport-option-name>
+          <wsimport-option-value>ventas.cliente.servicio</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+  </clients>
 </jax-ws>
